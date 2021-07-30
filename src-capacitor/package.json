@@ -1,0 +1,11 @@
+{
+  "name": "hlframework_frontend_web_theme",
+  "version": "0.0.1",
+  "description": "hlframework frontend web theme",
+  "author": "哈林科技 <“halinkeji@126.com>",
+  "private": true,
+  "dependencies": {
+    "@capacitor/cli": "^2.0.0",
+    "@capacitor/core": "^2.0.0"
+  }
+}
