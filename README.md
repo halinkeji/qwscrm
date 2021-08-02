@@ -9,7 +9,7 @@
 <div align="center">
 
 <a href="https://www.php.net"><img src="https://img.shields.io/badge/php-%3E=7.4-brightgreen.svg?maxAge=2592000" alt="Php Version"></a>
-  <a href="https://github.com/mochat-cloud/mochat/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mochat-cloud/mochat.svg?maxAge=2592000" alt="MoChat License"></a>
+  <a href="https://github.com/mochat-cloud/mochat/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mochat-cloud/mochat.svg?maxAge=2592000" alt="MoChat License"></a><img src="https://img.shields.io/npm/v/quasar.svg?label=quasar">
 
 </div>
 
