@@ -1,0 +1,563 @@
+// app global css in SCSS form
+
+/*
+   修改浏览器默认滚动条样式 begin
+// https://zhuanlan.zhihu.com/p/144204013
+*/
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    width: 6px;
+    background: rgba(#787a7a, 0.3);
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(#787a7a, 0.4);
+    background-clip: padding-box;
+    min-height: 28px;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(#787a7a, 0.7);
+  }
+  /** 滚动条样式 end **/
+  
+  /****** 输入框placeholder 颜色变浅一点 begin *******/
+  input::-webkit-input-placeholder { 
+    /* WebKit browsers */ 
+    color:$grey-6 !important; 
+  } 
+  input:-moz-placeholder { 
+    /* Mozilla Firefox 4 to 18 */ 
+    color:$grey-6 !important; 
+  } 
+  input::-moz-placeholder { 
+    /* Mozilla Firefox 19+ */ 
+    color:$grey-6 !important; 
+  } 
+  input:-ms-input-placeholder { 
+    /* Internet Explorer 10+ */ 
+    color:$grey-6 !important; 
+  }
+  /****** 输入框placeholder 颜色变浅一点 end *******/
+  
+  /* 修改全局样式 BEGIN */
+  .hl-input,
+  .hl-select,
+  .hl-field,
+  .hl-option-group,
+  .hl-form-item {
+    .q-field__input {
+      min-height: auto;
+    }
+    // 按钮高度缩小
+    .q-field__control,
+    .q-field__marginal {
+      height: 45px;
+    }
+    &.q-field--dense .q-field__control, 
+    &.q-field--dense .q-field__marginal {
+      height: 33px;
+    }
+    &.q-field--auto-height .q-field__control,
+    &.q-field--auto-height .q-field__native {
+      // min-height: 45px;
+      min-height: auto;
+    }
+    &.q-field--auto-height.q-field--dense .q-field__control,
+    &.q-field--auto-height.q-field--dense .q-field__native {
+      // min-height: 35px;
+      min-height: auto;
+    }
+    &.q-field__label {
+      top: 15px;
+    }
+    &.q-field--dense .q-field__label {
+      top: 8px;
+    }
+  }
+  
+  .hl-header,
+  .hl-footer,
+  .hl-page,
+  .hl-form,
+  .hl-card,
+  .hl-popup,
+  .hl-dialog {
+    .q-tab {
+      padding: 0 5px 0 12px;
+    }
+    .q-tabs--dense .q-tab {
+      min-height: 32px;
+    }
+  }
+  
+  /* 修改全局样式 END */
+  
+  .custom-page-bg {
+    background-color: var(--q-color-page-bg) ;
+  }
+  .custom-table-bg {
+    background-color: var(--q-color-table-bg) ;
+  }
+  .custom-other-bg {
+    background-color: var(--q-color-other-bg) ;
+  }
+  
+  .hl-sidebar {
+    &-menu-active {
+      background-color: var(--q-color-menu-bg-active);
+    }
+    .q-item.q-link {
+      border-radius: 5px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .q-item__label + .q-item__label {
+      margin-top: 0;
+    }
+  }
+  
+  // 隐藏DropDown按钮右侧的下箭头
+  .btn-dropdown-hide-droparrow {
+    &.q-btn-dropdown--simple .q-btn-dropdown__arrow {
+      display: none;
+    }
+  }
+  
+  .hl-header {
+    .q-tab__content {
+      min-width: auto !important;
+    }
+  }
+  
+  .hl-sidebar {
+    .q-item__section--avatar {
+      min-width:40px;
+    }
+  
+    /* 左侧导航菜单滚动条 */
+    .q-scrollarea__bar--v,
+    .q-scrollarea__thumb--v {
+      width: 6px;
+      opacity: 0.35;
+      border-radius: 5px;
+    }
+  }
+  
+  .hl-page {
+  }
+  
+  .hl-table {
+    /*
+    // 表格slot：top 里面
+    .q-table__top {
+      padding: 4px 3px 8px 0px;
+      .q-col-gutter-x-md, .q-col-gutter-md {
+        margin-left: 0;
+        & > * {
+          padding-left: 8px;
+        }
+      }
+      .q-space {
+        padding-left: 0;
+      }
+    } */
+    &.q-table--dense {
+      .q-table__top,
+      .q-table__bottom {
+        padding: 8px 10px;
+      }
+    }
+    .q-table__top,
+    .q-table__bottom {
+      padding: 14px 18px;
+    }
+  }
+  
+  .q-dialog {
+    &.q-dark,
+    .q-dark {
+      //background-color: #2d2d2d;  // $grey-9;
+      background-color: var(--q-color-other-bg);
+    }
+  
+    /* 使用v-drag，会导致对话框在小屏幕占满左右两边，这里增加一点空隙 */
+    .q-dialog__inner--minimized {
+      // margin: 10px;
+      padding: 10px 24px;
+    }
+    /* 改成16px以便跟 q-card__section 有相同的边距好对齐 */
+    .q-card__actions {
+      padding: 16px;
+    }
+  
+  }
+  
+  .hl-popup {
+    &.q-dark,
+    .q-dark {
+      //background-color: #2d2d2d;  // $grey-9;
+      background-color: var(--q-color-other-bg);
+    }
+    /* 使用v-drag，会导致对话框在小屏幕占满左右两边，这里增加一点空隙 */
+    .q-dialog__inner--minimized {
+      // margin: 10px;
+      padding: 10px 24px;
+    }
+    /* 改成16px以便跟 q-card__section 有相同的边距好对齐 */
+    .q-card__actions {
+      padding: 16px;
+    }
+  }
+  
+  .hl-form {
+    /* 验证失败样式 begin */
+    .q-field {
+      &__bottom--animated {
+        left: 2px;
+        bottom: -1px;
+        padding: 0;
+        z-index: 10;
+        .q-field__messages {
+          & div {
+            width: max-content;
+            color: $negative;
+            padding: 0px;
+          }
+        }
+      }
+    }
+    &.gutter {
+      .q-field {
+        &--with-bottom {
+          padding-bottom: 0;
+        }
+      }
+    }
+    .q-field {
+      &--with-bottom {
+        padding-bottom: 0;
+      }
+    }
+    /* 验证失败样式 end */
+  
+    /* 缩小表格输入框之间的垂直间距 */
+    .q-col-gutter-y-md > *,
+    .q-col-gutter-md > * {
+      padding-top: 14px;
+    }
+  
+    /* 当组件剩余空间很富裕时，上方对齐，默认是居中 */
+    .q-field > .q-field__inner {
+      justify-content: flex-start;
+    }
+  }
+  
+  .hl-table-sticky-header {
+    /* 表格头部锁定 begin */
+    &.q-dark .q-table__top,
+    &.q-dark .q-table__bottom,
+    &.q-dark thead tr:first-child th {/* bg color is important for th; just specify one */
+      // background-color: $dark;
+      background-color: var(--q-color-table-bg);
+    }
+    .q-table__top,
+    .q-table__bottom,
+    thead tr:first-child th {/* bg color is important for th; just specify one */
+      background-color: #fff;
+      // background-color: var(--q-color-table-bg);
+    }
+    thead tr th {
+      position: sticky;
+      z-index: 1;
+    }
+    thead tr:first-child th {
+      top: 0;
+    }
+  
+    /* this is when the loading indicator appears */
+    &.q-table--loading thead tr:last-child th {
+      /* height of all previous header rows */
+      // top: 48px;
+    }
+    /* 表格头部锁定 end */
+  }
+  
+  .hl-table-sticky-first-column {
+    &.q-dark td:first-child,
+    &.q-dark thead tr:first-child th:first-child {
+      /* bg color is important for th; just specify one */
+      //background-color: $dark;
+      background-color: var(--q-color-table-bg);
+    }
+    td:first-child,
+    thead tr:first-child th:first-child {
+      /* bg color is important for th; just specify one */
+      //background-color: #fff;
+      background-color: var(--q-color-table-bg);
+    }
+    th:first-child,
+    td:first-child {
+      position: sticky;
+      left: 0;
+      z-index: 1;
+    }
+  }
+  
+  .hl-table-sticky-last-column {
+    &.q-dark td:last-child,
+    &.q-dark thead tr:last-child th:last-child {
+      /* bg color is important for th; just specify one */
+      //background-color: $dark;
+      background-color: var(--q-color-table-bg);
+    }
+  
+    td:last-child,
+    thead tr:last-child th:last-child {
+      /* bg color is important for th; just specify one */
+      //background-color: #fff;
+      background-color: var(--q-color-table-bg);
+    }
+    th:last-child,
+    td:last-child {
+      padding-right: 6px !important;
+      position: sticky;
+      right: 0;
+      z-index: 1;
+    }
+    td:last-child {
+      box-shadow:  inset 1px 0px 0px 0px #bcbcbc;
+    }
+  }
+  
+  .hl-table-sticky-first-and-last-column {
+    &.q-dark td:first-child,
+    &.q-dark thead tr:first-child th:first-child {
+      /* bg color is important for th; just specify one */
+      // background-color: $dark;
+      background-color: var(--q-color-table-bg);
+    }
+    td:first-child,
+    thead tr:first-child th:first-child {
+      /* bg color is important for th; just specify one */
+      // background-color: #fff;
+      background-color: var(--q-color-table-bg);
+    }
+    th:first-child,
+    td:first-child {
+      position: sticky;
+      left: 0;
+      z-index: 1;
+    }
+  
+  
+    &.q-dark td:last-child,
+    &.q-dark thead tr:last-child th:last-child {
+      /* bg color is important for th; just specify one */
+      // background-color: $dark;
+      background-color: var(--q-color-table-bg);
+    }
+    td:last-child,
+    thead tr:last-child th:last-child {
+      /* bg color is important for th; just specify one */
+      // background-color: #fff;
+      background-color: var(--q-color-table-bg);
+    }
+    th:last-child,
+    td:last-child {
+      padding-right: 6px !important;
+      position: sticky;
+      right: 0;
+      z-index: 1;
+    }
+    td:last-child {
+      box-shadow:  inset 1px 0px 0px 0px #bcbcbc;
+    }
+  }
+  
+  .hl-table-sticky-header-and-first-column {
+    &.q-dark td:first-child,
+    &.q-dark tr th {
+      /* bg color is important for td; just specify one */
+      //background-color: $dark;
+      background-color: var(--q-color-table-bg);
+    }
+    tr th,
+    td:first-child {
+      /* bg color is important for td; just specify one */
+      //background-color: #fff;
+      background-color: var(--q-color-table-bg);
+    }
+    tr th {
+      position: sticky;
+      /* higher than z-index for td below */
+      z-index: 2;
+    }
+  
+    /* this will be the loading indicator */
+    thead tr:last-child th {
+      /* height of all previous header rows */
+      top: 48px;
+      /* highest z-index */
+      z-index: 3;
+    }
+    thead tr:first-child th {
+      top: 0;
+      z-index: 1;
+    }
+    tr:first-child th:first-child {
+      /* highest z-index */
+      z-index: 3;
+    }
+    td:first-child {
+      z-index: 1;
+    }
+    td:first-child, th:first-child {
+      position: sticky;
+      left: 0;
+    }
+  }
+  .hl-table-sticky-header-and-last-column {
+    td:last-child,
+    th:last-child {
+      padding-right: 6px !important;
+    }
+    td:last-child {
+      box-shadow:  inset 1px 0px 0px 0px #bcbcbc;
+    }
+  
+    &.q-dark td:last-child,
+    &.q-dark tr th {
+      /* bg color is important for td; just specify one */
+      // background-color: $dark;
+      background-color: var(--q-color-table-bg);
+    }
+    tr th,
+    td:last-child {
+      /* bg color is important for td; just specify one */
+      // background-color: #fff;
+      background-color: var(--q-color-table-bg);
+    }
+    tr th {
+      position: sticky;
+      /* higher than z-index for td below */
+      z-index: 2;
+      /* bg color is important; just specify one */
+      // background: inherit;
+    }
+  
+    /* this will be the loading indicator */
+    thead tr:last-child th {
+      /* height of all previous header rows */
+      top: 48px;
+      /* highest z-index */
+      z-index: 3;
+    }
+    thead tr:first-child th {
+      top: 0;
+      z-index: 1;
+    }
+    tr:last-child th:last-child {
+      /* highest z-index */
+      z-index: 3;
+    }
+    td:last-child {
+      z-index: 1;
+    }
+    td:last-child, th:last-child {
+      position: sticky;
+      right: 0;
+    }
+  }
+  .hl-table-sticky-header-and-first-last-column {
+    td:last-child,
+    th:last-child {
+      padding-right: 6px !important;
+    }
+    td:last-child {
+      box-shadow:  inset 1px 0px 0px 0px #bcbcbc;
+    }
+  
+    &.q-dark td:first-child,
+    &.q-dark tr th {
+      /* bg color is important for td; just specify one */
+      // background-color: $dark;
+      background-color: var(--q-color-table-bg);
+    }
+    tr th,
+    td:first-child {
+      /* bg color is important for td; just specify one */
+      // background-color: #fff;
+      background-color: var(--q-color-table-bg);
+    }
+  
+    &.q-dark td:last-child,
+    &.q-dark tr th {
+      /* bg color is important for td; just specify one */
+      // background-color: $dark;
+      background-color: var(--q-color-table-bg);
+    }
+    tr th,
+    td:last-child {
+      /* bg color is important for td; just specify one */
+      // background-color: #fff;
+      background-color: var(--q-color-table-bg);
+    }
+    tr th {
+      position: sticky;
+      /* higher than z-index for td below */
+      z-index: 2;
+      /* bg color is important; just specify one */
+      // background: inherit;
+    }
+  
+    /* this will be the loading indicator */
+    thead tr:last-child th {
+      /* height of all previous header rows */
+      top: 48px;
+      /* highest z-index */
+      z-index: 3;
+    }
+    thead tr:first-child th {
+      top: 0;
+      z-index: 1;
+    }
+    tr:last-child th:last-child {
+      /* highest z-index */
+      z-index: 3;
+    }
+    td:last-child {
+      z-index: 1;
+    }
+    td:last-child, th:last-child {
+      position: sticky;
+      right: 0;
+    }
+  
+    thead tr:first-child th {
+      top: 0;
+      z-index: 1;
+    }
+    tr:first-child th:first-child {
+      /* highest z-index */
+      z-index: 3;
+    }
+    td:first-child {
+      z-index: 1;
+    }
+    td:first-child, th:first-child {
+      position: sticky;
+      left: 0;
+    }
+  }
+  
