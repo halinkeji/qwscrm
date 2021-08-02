@@ -59,10 +59,7 @@ export default {
   name: 'SystemSet',
   data () {
     return {
-      corp: {
-        contact_url: process.env.BASE_URL_API + '/v1/contact/contact-callback?CorpId=' + 2 ,
-        book_url: process.env.BASE_URL_API + '/v1/worker/worker-callback?CorpId=' + 3
-      }
+      corp: {}
     }
   },
   created () {
@@ -74,7 +71,12 @@ export default {
         .dispatch("corp/getCorp")
         .then(res => {
           if (res.code == 200) {
-            this.corp = res.data ? res.data : {}
+            if(res.data){
+              this.corp = res.data ? res.data : {}
+              this.corp.contact_url = res.data.contact_url ? res.data.contact_url : process.env.BASE_URL_API + '/v1/contact/contact-callback?CorpId=' + res.data.id
+              this.corp.book_url = res.data.book_url ? res.data.book_url : process.env.BASE_URL_API + '/v1/worker/worker-callback?CorpId=' + res.data.id
+              console.log(this.corp)
+            }
           }
         })
         .catch(error => {})

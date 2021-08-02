@@ -2,6 +2,12 @@ import { Cookies,LocalStorage,Notify } from 'quasar'
 
 //auth Config 值
 
+// export const authConfig =  {
+//     domain: "hlfqt2BxF42o44Qqor",
+//     login_uri: "hlTaHnvRxxagiYHIYR",
+//     redirect_uri: "hlk2If2SOXAUc6OfXa",
+//     appId: "hlG9cTQcb7T69C9ot6"
+// }
 
 export const authConfig =  {
     domain: ".halin.net",

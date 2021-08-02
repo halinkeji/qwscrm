@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import { LoadingBar, Cookies, LocalStorage } from "quasar";
 import routes from './routes'
-
+var _ = require("lodash");
 const other_routes = [
   {
     path: 'https://www.halin.net',
@@ -58,7 +58,7 @@ const oauth_url =
  */
 
 import MainLayout from 'layouts/MainLayout.vue'
-
+import BlankLayout from 'layouts/BlankLayout.vue'
 
 const Router = new VueRouter({
   scrollBehavior: () => ({ x: 0, y: 0 }),
@@ -76,9 +76,9 @@ if (currentRouterData) {
   
   let allRouter = getFormatRoutes(currentRouterData)
   routes.push(...allRouter)
+  console.log('allRouter',allRouter)
   routes.push(...other_routes)
   Router.addRoutes(routes)
-
 }
 
 
@@ -92,10 +92,19 @@ function getFormatRoutes(arr, value = null, level = 0) {
           component: () => import(`@/pages${item.component}`)
         }
       } else {
-        var obj = {
-          path: item.path ? item.path : '/',
-          name: item.name ? item.name : item.label,
-          component: MainLayout
+        if(level == 0){
+          var obj = {
+            path: item.path ? item.path : '/',
+            name: item.name ? item.name : item.label,
+            component: MainLayout
+          }
+        }
+        if(level == 2  || level == 1){
+          var obj = {
+            path: item.path ? item.path : '/',
+            name: item.name ? item.name : item.label,
+            component: BlankLayout
+          }
         }
       }
       obj.meta = [];
@@ -107,6 +116,10 @@ function getFormatRoutes(arr, value = null, level = 0) {
       }
       if (item.icon) {
         obj.meta.icon = item.icon
+      }
+      if (item.meta) {
+        let iconInde = _.findIndex(item.meta, function(o) { return o.id == 'icon'; });
+        obj.meta.icon = item.meta[iconInde]  && item.meta[iconInde].title ? item.meta[iconInde].title : ""
       }
       if (item.children && item.children.length > 0) {
         obj.redirect='noredirect'
