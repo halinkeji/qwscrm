@@ -90,7 +90,7 @@ Node.js >= 10
 
 ### 侧边栏聊天工具部分演示图，持续更新
 ![哈林企微SCRM](https://cdn.halin.net/download/qwscrm/qw-7.png "哈林企微SCRM")
-![哈林企微SCRM](https://cdn.halin.net/download/qwscrm/qw-8.png "哈林企微SCRM")
+![哈林企微SCRM](https://cdn.halin.net/download/qwscrm/qw-8.jpg "哈林企微SCRM")
 ![哈林企微SCRM](https://cdn.halin.net/download/qwscrm/qw-9.png "哈林企微SCRM")
 
 ### 版权声明
