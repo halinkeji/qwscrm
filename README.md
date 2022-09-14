@@ -63,15 +63,23 @@ Node.js >= 10
 #### 系统安装
 ### 后端源码文件一键安装HLFramework框架，应用市场一键下载就OK了
 
-##### 图文教程链接： https://wiki.halin.net/details?id=3
+##### 图文教程链接： https://wiki.halin.net/page/article/3.html
 
 ##### 视频教程：https://v.qq.com/x/page/q32456iqkew.html
+
+#### 前端源码
+### qwscrm_pc  PC管理中心
+### qwscrm_sidebar_saas 平台管理商家的侧边栏
+### qwscrm_sidebar_merchant 商家管理会员的侧边栏
+
+#### 使用教程
+##### 图文教程链接： https://wiki.halin.net/page/article/9.html
 
 ### 联系我们加入群，请先给我们Star,感谢支持
 
 <img alt="logo" src="https://cdn.halin.net/download/qwscrm_kefu.png" height="200">
 
-### 部分演示图，持续更新
+### PC部分演示图，持续更新
 
 ![哈林企微SCRM](https://cdn.halin.net/download/qwscrm/qw-1.png "哈林企微SCRM")
 ![哈林企微SCRM](https://cdn.halin.net/download/qwscrm/qw-2.png "哈林企微SCRM")
@@ -80,6 +88,10 @@ Node.js >= 10
 ![哈林企微SCRM](https://cdn.halin.net/download/qwscrm/qw-5.png "哈林企微SCRM")
 ![哈林企微SCRM](https://cdn.halin.net/download/qwscrm/qw-6.png "哈林企微SCRM")
 
+### 侧边栏聊天工具部分演示图，持续更新
+![哈林企微SCRM](https://cdn.halin.net/download/qwscrm/qw-7.png "哈林企微SCRM")
+![哈林企微SCRM](https://cdn.halin.net/download/qwscrm/qw-8.png "哈林企微SCRM")
+![哈林企微SCRM](https://cdn.halin.net/download/qwscrm/qw-9.png "哈林企微SCRM")
 
 ### 版权声明
 
