@@ -42,10 +42,10 @@
 * 后端技术栈: `PHP`、`MySQL`、`Redis`、
 
 ### 特此鸣谢
-MoChat 的诞生离不开社区其他优秀的开源项目，在此特别鸣谢：
+哈林企微SCRM 的诞生离不开社区其他优秀的开源项目，在此特别鸣谢：
 
-[![EasyWechat](https://mochatcloud.oss-cn-beijing.aliyuncs.com/github/EasyWeChat-mini.png)](https://www.easywechat.com)
-[![Vue](https://mochatcloud.oss-cn-beijing.aliyuncs.com/github/Vue-mini.png)](https://cn.vuejs.org)
+[![EasyWechat](https://cdn.halin.net/download/qwscrm/EasyWeChat-mini.png)](https://www.easywechat.com)
+[![Vue](https://cdn.halin.net/download/qwscrm/Vue-mini.png)](https://cn.vuejs.org)
 
 
 
@@ -53,7 +53,7 @@ MoChat 的诞生离不开社区其他优秀的开源项目，在此特别鸣谢�
 #### 准备工作
 
 ```
-PHP = 7.4 (推荐7.4版本)
+PHP = 7.4 (仅限7.4版本)
 Composer
 MySQL >= 5.7
 Redis
@@ -95,4 +95,4 @@ Node.js >= 10
 
 ### 版权声明
 
-哈林企微SCRM 开源版遵循 [`GPL-3.0`](https://github.com/mochat-cloud/mochat/blob/main/LICENSE "GPL-3.0") 开源协议发布，并提供免费研究使用，但绝不允许修改后和衍生的代码做为闭源的商业软件发布和销售！
+哈林企微SCRM 开源版遵循 [`Apache-2.0`](https://github.com/halinkeji/hlpay/blob/master/LICENSE.md ) 
