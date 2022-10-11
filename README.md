@@ -95,4 +95,4 @@ Node.js >= 10
 
 ### 版权声明
 
-哈林企微SCRM 开源版遵循 [`Apache-2.0`](https://github.com/halinkeji/hlpay/blob/master/LICENSE.md ) 
+哈林企微SCRM 开源版遵循 [`Apache-2.0`](https://github.com/halinkeji/qwscrm/blob/master/LICENSE.md ) 
