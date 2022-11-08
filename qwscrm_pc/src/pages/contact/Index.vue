@@ -175,15 +175,17 @@
             </div>
           </q-td>
           <q-td key="tags" :props="props">
-            <q-badge
+            <span v-for="tag in props.row.relationTag">
+              <q-badge
               outline
               color="primary"
-              v-for="tag in props.row.relationTag"
               v-if="tag.tag"
               :label="`${tag.tag.name}`"
               :key="`tag-${tag.tag.id}`"
               class="float-left"
             />
+            </span>
+
           </q-td>
           <q-td key="worker" :props="props">
 
@@ -197,7 +199,7 @@
               class="float-left"
             /> -->
 
-            <q-badge outline color="teal" :label="`${props.row.relationWorker ? props.row.relationWorker.work.name : ''}`" class="text-caption" />
+            <q-badge outline color="teal" :label="`${props.row.relationWorker && props.row.relationWorker.worker ? props.row.relationWorker.worker.name : ''}`" class="text-caption" />
           </q-td>
           <q-td key="createtime" :props="props">
             {{ viewDate(props.row.relationWorker ? props.row.relationWorker.createtime : '') }}

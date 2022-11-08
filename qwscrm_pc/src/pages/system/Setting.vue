@@ -98,6 +98,7 @@ export default {
         .then((res) => {
           if (res.code == 200) {
             this.corp = res.data ? res.data : {}
+            LocalStorage.set('qwscrm_corp_data', res.data)
             this.$q.notify({
               color: 'positive',
               textColor: 'white',

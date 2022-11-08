@@ -129,7 +129,9 @@
               <q-avatar size="80px">
                 <img src="/pics/avatar.gif">
               </q-avatar>
-
+              <div>
+                {{ userName }}
+              </div>
               <q-toolbar>
                 <q-btn
                   color="primary"
@@ -385,7 +387,7 @@
 import { mapGetters, mapActions } from 'vuex'
 import routes from '@/router/routes'
 import Setting from '@/utils/setting'
-import { date } from 'quasar'
+import { date, LocalStorage } from 'quasar'
 import { removeAllCookies, removeAllLocalStorage } from '@/utils/common'
 export default {
   name: 'MainLayout',
@@ -407,11 +409,13 @@ export default {
         pSize: 6,
         totalCount: 0
       },
-      noticeText: false
+      noticeText: false,
+      userName: ''
     }
   },
   created () {
-    console.log('routes', routes)
+    const user_info = LocalStorage.getItem('qwscrm_user_info')
+    this.userName = user_info ? user_info.username : '未知'
     this.getNoticeData()
   },
   mounted () {

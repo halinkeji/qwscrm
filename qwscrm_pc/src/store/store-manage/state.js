@@ -20,6 +20,14 @@ export default function () {
       {
         label: '其他事务',
         value: '5'
+      },
+      {
+        label: '开户授权',
+        value: '6'
+      },
+      {
+        label: '停用授权',
+        value: '7'
       }
     ],
     logTypeObject: {
@@ -27,7 +35,9 @@ export default function () {
       2: '续费延期',
       3: '赠送延期',
       4: '功能开发',
-      5: '其他事务'
+      5: '其他事务',
+      6: '开户授权',
+      7: '停用授权'
     }
 
   }

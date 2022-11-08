@@ -163,8 +163,9 @@ function getRouterData() {
 }
 
 // import test from './test.js'
-var dd = false
 // Cookies.set('loggedIn',1)
+var dd = false
+
 Router.beforeEach((to, from, next) => {
   LoadingBar.start();
   if(dd){

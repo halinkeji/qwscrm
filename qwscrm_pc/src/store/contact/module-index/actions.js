@@ -141,6 +141,18 @@ export function getContactConsoleData ({ commit }, params) {
       })
   })
 }
+export function getSyncData ({ commit }, params) {
+  return new Promise((resolve, reject) => {
+    api
+      .post('v1/analysis/sync-data', params)
+      .then(response => {
+        resolve(response)
+      })
+      .catch(error => {
+        reject(error)
+      })
+  })
+}
 export function bindUserRelation ({ commit }, params) {
   return new Promise((resolve, reject) => {
     api.post('v1/contact/bind-user-relation', params)

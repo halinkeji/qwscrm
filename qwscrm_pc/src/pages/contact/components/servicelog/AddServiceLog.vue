@@ -37,6 +37,7 @@
                     label="授权应用"
                     v-model="logForm.clients_apply_id"
                     :options="applyDataList"
+                    @input="changeClient"
                     :rules="[(val) => !!val || '请选择授权应用']"
                   />
                 </div>
@@ -107,8 +108,41 @@
                 </q-icon>
               </template>
               </q-input>
-            </div>
 
+              <q-input
+                outlined
+                v-if="!currenApplyInfo.start_at"
+                v-model="logForm.start_time"
+                label="授权起始时间"
+                dense
+                readonly
+                :rules="[(val) => !!val || '请选择授权起始时间']"
+              >
+                <template v-slot:prepend>
+                  <q-icon name="event" class="cursor-pointer">
+                    <q-popup-proxy transition-show="scale" transition-hide="scale">
+                      <q-date v-model="logForm.start_time" mask="YYYY-MM-DD HH:mm" today-btn minimal>
+                        <div class="row items-center justify-end">
+                          <q-btn v-close-popup label="确定" color="primary" flat />
+            </div>
+                      </q-date>
+                    </q-popup-proxy>
+                  </q-icon>
+                </template>
+                <template v-slot:append>
+                  <q-icon color="grey" name="cancel"></q-icon>
+                  <q-icon name="access_time" class="cursor-pointer">
+                    <q-popup-proxy transition-show="scale" transition-hide="scale">
+                      <q-time v-model="logForm.start_time" mask="YYYY-MM-DD HH:mm" format24h>
+                        <div class="row items-center justify-end">
+                          <q-btn v-close-popup label="确定" color="primary" flat />
+                        </div>
+                      </q-time>
+                    </q-popup-proxy>
+                  </q-icon>
+                </template>
+              </q-input>
+            </div>
           <div class="col-12 q-px-xs">
             <q-input v-model="logForm.content" outlined :rows="10" label="日志内容" type="textarea" />
           </div>
@@ -177,7 +211,8 @@ export default {
         title: '',
         type: '1',
         clients_apply_id: '',
-        end_time: date.formatDate(new Date(), 'YYYY-MM-DD  HH:mm:ss')
+        end_time: date.formatDate(new Date(), 'YYYY-MM-DD  HH:mm:ss'),
+        start_time: ''
       },
       siteClientId: '',
       logTypeData: this.$store.state.serviceLog.logTypeArr,

@@ -193,19 +193,24 @@
             </q-btn>
           </q-td>
           <q-td key="tags"  :props="props">
-            <q-badge outline color="primary"
+            <div v-if="props.row.workerTag">
+              <q-badge outline color="primary"
               v-for="tag in props.row.workerTag"
               :label="`${tag.name}`"
               :key="`tag-${tag.id}`"
             />
+            </div>
+
           </q-td>
           <q-td key="departments"  :props="props">
-
+          <div v-if="props.row.workerDepartment">
              <q-badge outline color="primary"
               v-for="departments in props.row.workerDepartment"
               :label="`${departments.workerDepartment ? departments.workerDepartment.name : ''}`"
               :key="`departments-${departments.id}`"
+
             />
+          </div>
           </q-td>
           <q-td key="contact_auth"  :props="props">
             <q-toggle

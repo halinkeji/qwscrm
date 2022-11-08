@@ -7,6 +7,8 @@ import analysis from './module-analysis'
 import tagviews from './module-tagviews'
 
 import corp from './module-corp'
+import provider from './module-provider'
+import providerSuite from './module-provider-suite'
 import contact from './contact/module-index'
 import contactTag from './contact/module-tag'
 import contactField from './contact/module-field'
@@ -52,6 +54,8 @@ export default function (/* { ssrContext } */) {
       mConsole,
       tagviews,
       corp,
+      provider,
+      providerSuite,
       contact,
       contactTag,
       groupchat,

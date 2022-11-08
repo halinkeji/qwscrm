@@ -52,7 +52,7 @@
                   </template>
                 </q-input>
               </div>
-              <div class="col-4"  v-if="[2, 3, 6, 7].indexOf(parseInt(logForm.type)) > -1">
+              <div class="col-4"  v-if="[2, 3, 6, 7].indexOf(parseInt(logForm.type)) > -1 && limitAddStore.indexOf(setConfig.currentApplyId) > -1">
                 <q-input outlined v-model="logForm.son_num" label="可创建门店数" hint="无更改可不进行填写" dense> </q-input>
               </div>
               <div class="col-4"  v-if="[2, 3, 6, 7].indexOf(parseInt(logForm.type)) > -1">
@@ -93,7 +93,8 @@ export default {
         son_num: '',
         account_num: ''
       },
-      logTypeData: this.$store.state.storeManage.logTypeArr
+      logTypeData: this.$store.state.storeManage.logTypeArr,
+      limitAddStore: ['chainstore', 'lschainstore', 'myouka', 'mychainstore', 'cychainstore', 'fzchainstore']
     }
   },
 

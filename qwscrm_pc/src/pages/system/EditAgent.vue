@@ -109,15 +109,15 @@ export default {
       ],
       typeArr: [
         {
-          label: '应用主页',
+          label: '自建应用',
           value: '1'
         },
         {
-          label: '收发消息',
+          label: '第三方代开发应用',
           value: '2'
         },
         {
-          label: '授权登录',
+          label: '第三方标准应用',
           value: '3'
         }
       ],

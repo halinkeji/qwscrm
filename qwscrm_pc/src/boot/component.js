@@ -1,6 +1,5 @@
 import Vue from 'vue'
 
-
 const _ = require('lodash')
 
 import { date } from 'quasar'
